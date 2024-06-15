@@ -1,0 +1,4 @@
+npx sequelize-cli db:seed --seed my-seeder-file.js
+
+
+npx sequelize-cli db:migrate --to my-file.js
