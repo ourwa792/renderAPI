@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 
 const app = express()
 const sequelize = require('./database/db').sequelize
@@ -10,6 +11,10 @@ app.get('/', (req, res)=>{
         console.log(data)
         res.json(data)
     })
+})
+
+app.get('/v1',(req, res)=>{
+    res.sendFile(path.join(__dirname, '/v2.html'))
 })
 
 sequelize.sync()
